@@ -3,6 +3,7 @@
 %define	texhash	[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 
 Summary:	The TeX Portable Graphic Format
+Summary(pl):	Przeno¶ny format grafiki dla TeXa
 Name:		tetex-pgf
 Version:	0.60
 Release:	1
@@ -15,7 +16,10 @@ Requires(post,postun):	/usr/bin/texhash
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The TeX Portable Graphic Format.
+A macro package for creating graphics directly in TeX and LaTeX.
+
+%description
+Pakiet makr do tworzenia grafiki bezpo¶rednio z TeXa i LaTeXa.
 
 %prep
 %setup -q -n %{short_name}
