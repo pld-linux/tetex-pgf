@@ -5,12 +5,12 @@
 Summary:	The TeX Portable Graphic Format
 Summary(pl):	Przeno¶ny format grafiki dla TeXa
 Name:		tetex-pgf
-Version:	0.60
+Version:	0.61
 Release:	1
 License:	LaTeX Project Public License
 Group:		Applications/Publishing/TeX
 Source0:	http://dl.sourceforge.net/latex-beamer/%{short_name}-%{version}.tar.gz
-# Source0-md5:	0478c4aecd56f3f4dc8bb4e0df0edd95
+# Source0-md5:	f4f705239170512c31dcb90805e27ecd
 Requires:	tetex-latex
 Requires(post,postun):	/usr/bin/texhash
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
