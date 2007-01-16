@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A macro package for creating graphics directly in TeX and LaTeX.
 
-%description
+%description -l pl
 Pakiet makr do tworzenia grafiki bezpo¶rednio z TeXa i LaTeXa.
 
 %prep
@@ -32,12 +32,12 @@ Pakiet makr do tworzenia grafiki bezpo¶rednio z TeXa i LaTeXa.
 rm -rf $RPM_BUILD_ROOT
 
 for SEC in generic latex plain; do
-    cd $SEC/%{short_name}
-    for DIR in *; do
-	install -d $RPM_BUILD_ROOT%{_datadir}/texmf/tex/$SEC/%{short_name}/$DIR
-	install $DIR/* $RPM_BUILD_ROOT%{_datadir}/texmf/tex/$SEC/%{short_name}/$DIR
-    done
-    cd ../..
+	cd $SEC/%{short_name}
+	for DIR in *; do
+		install -d $RPM_BUILD_ROOT%{_datadir}/texmf/tex/$SEC/%{short_name}/$DIR
+		install $DIR/* $RPM_BUILD_ROOT%{_datadir}/texmf/tex/$SEC/%{short_name}/$DIR
+	done
+	cd ../..
 done
 
 %clean
