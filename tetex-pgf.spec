@@ -6,7 +6,7 @@
 # Pack more files ? (documentation sources as examples)
 
 Summary:	The TeX Portable Graphic Format
-Summary(pl):	Przeno∂ny format grafiki dla TeXa
+Summary(pl.UTF-8):   Przeno≈õny format grafiki dla TeXa
 Name:		tetex-pgf
 Version:	1.01
 Release:	1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A macro package for creating graphics directly in TeX and LaTeX.
 
-%description -l pl
-Pakiet makr do tworzenia grafiki bezpo∂rednio z TeXa i LaTeXa.
+%description -l pl.UTF-8
+Pakiet makr do tworzenia grafiki bezpo≈õrednio z TeXa i LaTeXa.
 
 %prep
 %setup -q -n %{short_name}-%{version}
