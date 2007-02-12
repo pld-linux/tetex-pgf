@@ -6,7 +6,7 @@
 # Pack more files ? (documentation sources as examples)
 
 Summary:	The TeX Portable Graphic Format
-Summary(pl.UTF-8):   Przenośny format grafiki dla TeXa
+Summary(pl.UTF-8):	Przenośny format grafiki dla TeXa
 Name:		tetex-pgf
 Version:	1.01
 Release:	1
