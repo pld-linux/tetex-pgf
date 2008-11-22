@@ -16,10 +16,9 @@ Group:		Applications/Publishing/TeX
 Source0:	http://dl.sourceforge.net/pgf/%{short_name}-%{version}.tar.gz
 # Source0-md5:	fb8cb62462f8248e327bf23ee5b9ccda
 URL:		http://sourceforge.net/projects/pgf/
-BuildRequires:  findutils
+Requires(post,postun):	/usr/bin/texhash
 Requires:	tetex-latex
 Requires:	tetex-latex-xcolor >= 2.00
-Requires(post,postun):	/usr/bin/texhash
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,7 +40,7 @@ for SEC in generic latex plain; do
 	cd $SEC/%{short_name}
 	for DIR in $(find -type d); do
 		install -d $RPM_BUILD_ROOT%{_datadir}/texmf/tex/$SEC/%{short_name}/$DIR
-		FILES=$(find $DIR -maxdepth 1 -type f) 
+		FILES=$(find $DIR -maxdepth 1 -type f)
 		if [ -n "$FILES" ]; then
 			install $FILES $RPM_BUILD_ROOT%{_datadir}/texmf/tex/$SEC/%{short_name}/$DIR
 		fi
